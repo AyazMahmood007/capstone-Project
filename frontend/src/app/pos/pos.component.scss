@@ -1,0 +1,117 @@
+.cart-title {
+    font-family: cursive;
+    font-weight: bold;
+    color: #673ab7;
+    font-size: 35px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.cart-cross {
+    content: "\274C";
+    float: right;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-right: 20px;
+   
+}
+
+cart-cross-styel{
+    float: right;
+    
+}
+
+.order-number{
+    font-family: cursive;
+    font-weight: bold;
+    color: #673ab7;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.time-stamp{
+  
+    float: right;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    font-family: cursive;
+    color: grey;
+}
+
+.cart-total{
+    display: inline-block;
+    color: #673ab7;
+    font-family: cursive;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 25px;
+}
+
+.cart-amount{
+    float: right;
+    color: black;
+    font-family: cursive;
+    font-weight: bold;
+    padding-right: 10px;
+    font-size: 25px;
+}
+
+.cart-bottom-buttons {
+    font-size: 22px;
+    border-radius: 30px;
+    background-color:  #673ab7;
+    color: white;
+    margin: 0 auto;
+    display: block;
+    font-family: cursive;
+}
+
+.cart-sub-total{
+    display: inline-block;
+    color: #673ab7;
+    font-family: cursive;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.cart-tsub-total-amount{
+    float: right;
+    color: grey;
+    font-family: cursive;
+    font-weight: bold;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.item-quality-button{
+    padding: 5px;
+    font-size: 36px;
+    border-radius: 30px; 
+    border: 1px solid black;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: #CFF0FC;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.product-name-in-cart{
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.product-quantity-buttons-alignemnt{
+    width: 50%; 
+    display: flex;
+     justify-content: center; /* For horizontal alignment */
+      align-items: center;
+}
+
+

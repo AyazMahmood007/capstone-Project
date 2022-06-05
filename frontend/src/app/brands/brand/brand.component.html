@@ -1,0 +1,25 @@
+<mat-toolbar>
+    <span>Add New Brand</span>
+    <button class="btn-dialog-close" mat-stroked-button (click)="onclose()" tabindex="-1" style="margin-left: auto;">
+        <mat-icon>clear</mat-icon>
+    </button>
+</mat-toolbar>
+<form [formGroup]="brandService.brandForm" class="normal-form" (submit)="onSubmit()">
+
+    <mat-grid-list cols="2" rowHeight="300px">
+        <mat-grid-tile>
+            <div class="controles-container">
+                <input type="hidden" formControlName="brandId">
+                <mat-form-field style="width: 100%;">
+                    <input formControlName="brandName" matInput placeholder="Brand Name">
+                </mat-form-field>
+                <mat-form-field style="width: 100%;">
+                    <input formControlName="brandDescription" matInput placeholder="Brand Description">
+                </mat-form-field>
+                <div>
+                    <button mat-raised-button color="primary">Submit</button>
+                </div>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</form>

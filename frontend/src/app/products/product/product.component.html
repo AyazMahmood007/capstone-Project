@@ -1,0 +1,126 @@
+<div style="padding-top: 20px;">
+    <mat-toolbar>
+        <span>Add New Product</span>
+        <button class="btn-dialog-close" mat-stroked-button (click)="onclose()" tabindex="-1" style="margin-left: auto;">
+            <mat-icon>clear</mat-icon>
+        </button>
+    </mat-toolbar>
+</div>
+
+
+<div class="container">
+    <form [formGroup]="productService.productForm" class="normal-form" (submit)="onSubmit()">
+
+        <mat-grid-list cols="2" rowHeight="450px">
+            <div class="controles-container"></div>
+
+            <mat-grid-tile>
+                <div class="controles-container">
+                    <input type="hidden" formControlName="productId">
+                    <mat-form-field style="width: 100%;">
+                        <input formControlName="productName" matInput placeholder="Product Name">
+                    </mat-form-field>
+                    <mat-form-field style="width: 100%;">
+                        <input formControlName="productDescription" matInput placeholder="Product Description">
+                    </mat-form-field>
+                
+                        <mat-form-field style="width: 200px; display: block;">
+                            <input formControlName="costPrice" matInput placeholder="Unit Cost Price">
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Product Types</mat-label>
+                            <mat-select formControlName="productTypeId" name="productTypeId">
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let type of productTypes" [value]="type.productTypeId">
+                                    {{type.productTypeName}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                    
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Product Locations</mat-label>
+                            <mat-select formControlName="productLocationId" name="productLocationId">
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let location of locations" [value]="location.locationId">
+                                    {{location.locationName}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Product Categoreis</mat-label>
+                            <mat-select formControlName="productCategoryId" name="productCategoryId">
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let category of productCategories" [value]="category.categoryId">
+                                    {{category.categoryName}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <button mat-raised-button color="primary">Submit</button>
+                    </div>
+                </div>
+            </mat-grid-tile>
+
+            <mat-grid-tile>
+                <div class="controles-container">
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Product Sizes</mat-label>
+                            <mat-select formControlName="size" name="size">
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let size of sizes" [value]="size.value">
+                                    {{size.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Seasons</mat-label>
+                            <mat-select formControlName="season" name="season">
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let season of seasons" [value]="season.value">
+                                    {{season.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Grades</mat-label>
+                            <mat-select formControlName="grade" name="grade">
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let grade of grades" [value]="grade.value">
+                                    {{grade.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Status</mat-label>
+                            <mat-select formControlName="status" name="status">
+                                <mat-option>None</mat-option>
+                                <mat-option *ngFor="let status of statuses" [value]="status.value">
+                                    {{status.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>                    
+                    <div>
+                        <mat-form-field style="width: 200px;">
+                            <input formControlName="qty" matInput placeholder="Quantity">
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </form>
+</div>

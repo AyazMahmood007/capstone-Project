@@ -1,0 +1,170 @@
+<div class="container-fluid">
+    <div class="col-12">
+        <div class="row">
+
+            <div class="col-8">
+                        
+        
+                <div class="card shadow-lg p-1 mb-2 mt-2 bg-body rounded-10" style="border-radius: 20px;" >
+                   <div>
+                    <div class="order-number" style="display: inline-block;">Order # 0051</div>
+                    <div class="time-stamp" style=" float: right;">{{getCurrentTime()}}</div>
+                   </div>
+
+                   <div class="col" style="margin: 15px; width: 50%;">
+                    
+                    <div class="input-group" style="height: 45px;">
+                        <input class="form-control border" type="search" value="search" id="example-search-input" >
+                    </div>
+                </div>
+                  <div class="card-body">
+                    <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                    <div id="stockChart" style="height: 625px; width: auto;"></div>
+                    
+                  </div>
+                </div>
+
+
+                <div class="card shadow-lg p-1 mb-2 mt-2 bg-body rounded-10" style="border-radius: 20px;" >
+                    
+                    <div class="card-body">
+                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        
+                          <div class="row">
+                            
+                              <div class="card shadow-lg p-1 mb-2 mt-2 mr-2 ml-2 bg-body rounded-12" style="height: 80px; width: 20%; border-radius: 15px;"
+                              *ngFor="let cat of categoriesList; let i = index;">
+                                  <div class="card-body">
+                                      <div>{{cat.categoryName}}</div>
+                                    </div>  
+                                  </div>
+                              
+                          </div>
+                        
+                   
+                      
+                      
+                    </div>
+                  </div>
+          
+              </div>
+
+                <div class="col-4">
+                    <div class="card shadow-lg p-1 mb-2 mt-2 bg-body rounded-10" style="border-radius: 25px;">
+                        <div >
+                          
+                            <div class="cart-title" style="display: inline-block;" >Cart</div>
+                            <div class="cart-cross">&#10060;</div>
+                          
+                        </div>
+                         
+                        
+                        <div class="card-body">
+                          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                          <div style="height: 530px; width: auto; overflow: hidden; overflow-y: auto;
+                          margin-top: 50px;"
+                          
+                         >
+
+                            
+                        
+                            <div class="card shadow p-1 mb-2 mt-2 bg-body" style="border-radius: 25px;" 
+                            *ngFor="let product of productList; let i = index;" >
+                           
+                                <div class="card-body" style="height: 70px; width: auto;">
+                               
+                                 <div class="row">
+                                    <div class="product-name-in-cart" >
+                                       {{product.productName}}
+                                    </div>
+    
+                                    <div class="product-quantity-buttons-alignemnt">
+                                        <!-- <img src="..." class="rounded-circle" alt="..."> -->
+                                        <span class="item-quality-button">&#43;</span>
+                                        <span style="font-size: 25px;">{{product.productQuantity}}</span>
+                                        <span class="item-quality-button">&#8722;</span>
+    
+                                    </div>
+                                 </div>
+        
+                                  
+                                  
+                                </div>
+                              </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        </div>
+
+                            
+                                <div class="" >
+                                    <div  class="cart-sub-total">
+                                        Sub Total
+                                     </div>
+                                     <div class="cart-tsub-total-amount">
+                                         40$
+                                     </div>
+                                </div>
+                                <div style="margin-top: 20px; margin-bottom: 10px;" >
+                                    <div class="cart-sub-total">
+                                        Tax
+                                     </div>
+                                     <div class="cart-tsub-total-amount">
+                                         5$
+                                     </div>
+                                </div>
+                           
+
+                          <div class="card shadow-lg p-1 mb-2 mt-2 bg-body rounded-10" style="border-radius: 25px;">
+                           
+                            <div class="card-body">
+                              <div style="height: 140px; width: auto;">
+
+                                <div>
+                                    <div class="cart-total">
+                                        Total
+                                    </div>
+                                    <div class="cart-amount">
+                                        45.00$
+                                    </div>
+                                </div>
+                                
+                                   <div  style="margin-top: 15px">
+                                    
+                                        <button style=" width: 50%;" type="button" class="btn cart-bottom-buttons">PENDING</button>
+                                     <div style="margin-top: 10px;">
+                                        <button style="width: 50%;" type="button" class="btn cart-bottom-buttons">CHECK OUT</button>
+                                     </div>
+                                         
+                                        
+
+                                   </div>
+                                
+                            </div>
+    
+                              
+                              
+                            </div>
+                          </div>
+                            
+
+
+                          
+
+                          
+                        </div>
+                      </div>
+                </div>
+
+               
+
+               
+
+            
+        </div>
+    </div>
+
+</div>

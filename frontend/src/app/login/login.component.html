@@ -1,0 +1,21 @@
+
+<mat-card style="background-color: rgba(89, 0, 255, 0.384);">
+  <mat-card-title>Login</mat-card-title>  
+<mat-card-content>
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <mat-form-field>
+    <input type="text" matInput placeholder="Username" formControlName="username">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="password" matInput placeholder="Password" formControlName="password">
+  </mat-form-field>
+</form>
+</mat-card-content>
+<mat-card-actions>
+  <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+  <!--<mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+</mat-card-actions>
+<mat-card-footer>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</mat-card-footer>
+</mat-card>

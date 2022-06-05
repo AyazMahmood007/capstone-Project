@@ -1,0 +1,55 @@
+<!-- <div class="container">   
+    <mat-toolbar style="text-align: center;">
+        <span class="fill-remaining-space"></span>
+        <span style="text-align: center;"><h1>Friends Clothing Store</h1></span>
+        <span class="fill-remaining-space"></span>
+    </mat-toolbar>
+<router-outlet></router-outlet>
+</div> -->
+
+<div class="card" >
+    <div class="card-header">
+       
+            <!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                Link with href
+              </a> -->
+            
+                 <img class="menu-icon"  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" src="../assets/img/menu-button-wide.svg" alt="Menu" >
+           
+            <span class="app-title"> Friends Clothing Store </span>
+
+              <!-- <div style="width: 50%;"> Friends Clothing Store</div> -->
+            
+              <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                Button with data-bs-target
+              </button> -->
+              
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <!-- <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div> -->
+
+
+                <div class="offcanvas-body">
+
+                    <h2 style="color: white; text-align: center;">Menu</h2>
+                    <div>
+                        <a class="menu-buttons" data-bs-dismiss="offcanvas" routerLink="/welcome">Home</a>
+                        <a class="menu-buttons" data-bs-dismiss="offcanvas" routerLink="/category">Category</a>
+                        <a class="menu-buttons" data-bs-dismiss="offcanvas" routerLink="/brand">Brand</a>
+                        <a class="menu-buttons" data-bs-dismiss="offcanvas" routerLink="/product">Product</a>
+                    </div>
+                    
+                    <!-- <span class="side-bar-copy-right">CopyRight FCS 2022</span> -->
+                </div>
+                
+              </div>
+
+     
+        
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+
+
